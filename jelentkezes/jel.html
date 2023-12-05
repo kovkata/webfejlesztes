@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kovács Kata">
+    <meta name="description" content="Ezen az oldalon egy űrlap található, amelyet ha helyesen kitölt a felhasználó, akkor jelentkezni tud a kollégiumba.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelentkezés</title>
+    <script src="validalas/jquery-3.7.1.min.js"></script>
+    <script src="validalas/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#jelent").validate({ 
+                rules: {
+                    neptun: {
+                        required:true,
+                        minlength: 6,
+                    },
+                    szak: "required",
+                    email: {
+                        email: true,
+                        required: true
+                    },
+                    jelszo: {
+                        required: true,
+                        minlength: 8,
+                    },
+                    telszam: {
+                        required: true,
+                        minlength: 10,
+                    },
+                },
+                messages: {
+                    neptun:{
+                        required: " Add meg a Neptun kódod!",
+                        minlength: " A neptunkódod 6 karakter hosszú legyen!"
+                        },
+                    szak:" Add meg a szakod!",
+                    email: " Valós email címet adj meg",
+                    jelszo: {
+                        required: " Add meg a jelszavad!",
+                        minlength: " A jelszavad legalább 8 karakter hosszú legyen!"
+                    },
+                    telszam: " Valós telefonszámot add meg!",
+                },
+            });
+        });
+    </script>
+        
+    <link rel="stylesheet" href= ../stilus.css >
+    <link rel="icon" href="../kepek/favicon.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav id="fomenu">
+            <ul>
+                <li><img src="../kepek/logo.jpg" alt="logo"></li>
+                <li class="le"><a href="../index.html">KOLI</a></li>
+                <li class="le"> <a href=../quiz/quiz.html>QUIZ</a></li>
+                <li class="active le"> JELENTKEZÉS</li>
+                <li class="le"> <a href=../csocso/csocso.html>CSOCSÓ?</a></li>
+            </ul>
+        </nav>
+    </header>
+        <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php" id="jelent" novalidate="novalidate">
+            <article class="jelentkezes">
+                <h1 class="kozep">Jenetkezz te is a Corvunis Egyetem Tarkaréti Kollégiumába!</h1><br>
+                    <label>Név: <input type="text" name="nev"><br><br></label>
+                    <label>Neptun kód: <input type="text" name="neptun"><br><br></label>
+                    <label>Szak: <input type="text" list="szakok" name="szak" placeholder="Írd be a szakod." autofocus><br><br>
+                        <datalist id="szakok">
+                        <option value="NT">
+                        <option value="NG">
+                        <option value="GI">
+                        <option value="SzocPol">
+                        <option value="ÜA">
+                        <option value="GM">
+                        <option value="GMA">
+                        <option value="AK">
+                        <option value="GPME">
+                        <option value="PSZ">
+                        </datalist> </label>                            
+                    <label>Hányadik félév? </label>
+                    <select name="felev">
+                        <option>1. félév</option>
+                        <option>2. félév</option>
+                        <option>3. félév</option>
+                        <option>4. félév</option>
+                        <option>5. félév</option>
+                        <option>6. félév</option>
+                        <option>7. félév</option>
+                        <option>8. félév</option>
+                        <option>9. félév</option>
+                        <option>10. félév</option>
+                        <option>10+. félév</option>
+                    </select><br><br>
+                    <label>Születési dátum: <input type="date" name="szuli"><br><br></label>
+                    <label>E-mail cím (iskolai): <input type="email" name="email"><br><br></label>
+                    <label>E-mail cím jelszava: <input type="password" name="jelszo"><br><br></label>
+                    <label>Telefonszám: <input type="tel" name="telszam"><br><br></label>
+                    <label>Budapesten laksz?<br></label>
+                    <label><input type="radio" name="bp" checked> Igen<br></label>
+                    <label><input type="radio" name="bp"> Nem<br><br></label>
+                    <label>Kikkel laksz egy háztartásban?<br></label>                        <label><input type="checkbox" name="anya">Anya<br></label>
+                    <label><input type="checkbox" name="apa">Apa<br></label>
+                    <label><input type="checkbox" name="teso">Testvér(ek)<br></label>
+                    <label><input type="checkbox" name="nagyi">Nagyszülő(k)<br></label>
+                    <label><input type="checkbox" name="stb">Mással/Másokkal<br></label>
+                    <label><input type="checkbox" name="egyedül">Egyedül lakok<br><br></label>
+                    <p class="kozep"><label><input class="mybutton" type="submit"></label> <label><input class="mybutton" type="reset"></label></p>
+                </article>
+            </form>
+            <footer>
+            <h2>
+                ! Az oldal nem reprezentálja a Tarkaréti Kollégium hivatalos weboldalát !<br>
+                &copy;Kovács Kata Corvinus 2023<br>
+            </h2>
+            <a href="https://www.facebook.com/pages/Tarkar%C3%A9ti-Koll%C3%A9gium/166963890052790" target="_blank"><img src="../kepek/fb.jpg" alt="fb"></a> 
+            <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/kollegiumok/tarkareti-kollegium/" target="_blank"><img src="../kepek/corvinus.jpg" alt="corvinus"></a>
+            <img src="../kepek/wifi.jpg" alt="wifi" title="sefulesefarka">
+        </footer>
+        
+</body>
+</html>
