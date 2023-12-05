@@ -1,0 +1,9 @@
+Oldal készítőjének neve: Kovács Kata
+
+URL cím:
+
+Rövid leírás:A weboldal a Budapest Corvinus Egyetem Tarkaréti Kollégiumát mutatja be egy lakó szemszögéből. Található rajat egy ismertető a kollégium épületéről és közösségéről, továbbá két egy kvíz, egy galléria és egy oldal a jelentkezésre.
+
+JavaScript kód: Az epulet.html és a kozosseg.html oldalakon található kódok feladata egy új szöveg megjelenítése, ha a felhasznála a kijelölt rész fölé viszi az egeret. A quiz.html oldalon található kód feladata a felhasználó által kiválasztott űrlapelemek alapján meghatározni a lehetséges szobaszámát.
+
+A használt Google web fonttípus forrása:https://www.1001freefonts.com/bakery.font

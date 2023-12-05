@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kovács Kata">
+    <meta name="description" content="Az oldalon található egy galléria, amelyben néhány(a résztvevők beleegyezésével készített) képeket láthatunk beszélgetésekről. Ezeknek a témája a csocsózás.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csocsó?</title>
+    <script src="jquery-3.7.1.js"></script>
+    <script src="galleria-1.6.1/galleria-1.6.1/dist/galleria.js"></script>
+    <script src="galleria-1.6.1/galleria-1.6.1/dist/themes/classic/galleria.classic.js"></script>
+    <script>
+        $(document).ready(function () {
+        $('#csocso').galleria(
+        width = 500,
+        height = 500
+        );
+        });
+        </script>
+        <style>
+         .galleria {
+         margin: auto;
+         width: 50vw;
+         height: 50vw;
+         }
+         </style>
+    <link rel="stylesheet" href= ../stilus.css >
+    <link rel="icon" href="../kepek/favicon.jpg" type="image/x-icon">
+</head>
+<body>
+    <header id="csocsoo">
+        <nav id="fomenu">
+            <ul>
+                <li> <img src="../kepek/logo.jpg" alt="logo"></li>
+                <li class="le"><a href="../index.html">KOLI</a></li>
+                <li class="le"> <a href=../quiz/quiz.html>QUIZ</a></li>
+                <li class="le"> <a href=../jelentkezes/jel.html>JELENTKEZÉS</a></li>
+                <li class="active le">CSOCSÓ?</li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+    <h2>Az estéink meghatározó része a csocsó:</h2>
+        <div id="csocso" class="galleria">
+            <img src="kep/zh.jpg" alt="Bár mindenki komolyan veszi a tanulmányait, de egy kis esti csocsó mindig belefér kikapcsolódásként" title="zh előtti beszlégetések">
+            <img src="kep/hova.jpg" alt="Elbújt a koli egyetlen csocsóasztala, vagy talán csak nem talált lent senkit, bár ezt meg is értem hajnali fél egykor" title="Hova?">
+            <img src="kep/csocs.jpg" alt="Ezek a pár szavas beszégetések inspiráltak a weblap elkészítésére, amelyek közül még jópár rá se fért a képre" title="A weblap névadója">
+            <img src="kep/nemet.jpg" alt="Első ránézésre azt gondolhatnánk, hogy egy német hallgatóval játszottunk, de igazából csak a magyar úriemberünk szimpatizál a német nyelvvel" title="Németül">
+            <img src="kep/mizu.jpg" alt="Kedves barátunknak ezt a kérdését már nem tudom semmivel sem megmagyarázni (de még ő se tudja)" title="Mizu?">
+            <img src="kep/unatkozok.jpg" alt="A beszélgetés előtt már érzésem szerint túl sokszor írtam én a csocsót, úgyhogy inkább hagyta, hogy ő mondja." title="Unatkozok">
+        </div>
+        <p>Ha szívesen olvassnál még a csocsózásról nézz rá a <a class="szoveg_link" href="../koli/kozosseg/kozosseg.html">Közösség</a> című oldal végére. </p>
+    </article>
+    <footer>
+        <h2>
+            ! Az oldal nem reprezentálja a Tarkaréti Kollégium hivatalos weboldalát !<br>
+            &copy;Kovács Kata Corvinus 2023<br>
+        </h2>
+        <a href="https://www.facebook.com/pages/Tarkar%C3%A9ti-Koll%C3%A9gium/166963890052790" target="_blank"><img src="../kepek/fb.jpg" alt="fb"></a> 
+        <a href="https://www.uni-corvinus.hu/fooldal/elet-a-corvinuson/kollegiumok/tarkareti-kollegium/" target="_blank"><img src="../kepek/corvinus.jpg" alt="corvinus"></a>
+        <img src="../kepek/wifi.jpg" alt="wifi" title="sefulesefarka">
+    </footer>
+</body>
+</html>
